@@ -12,18 +12,30 @@ function renderRecords(data) {
       var exercise_info = ''
       if (exercise_name) {
         exercise_info +=`<li class='row'>`
+        
+        exercise_info +=`<div class='col-md-4'>`
         if (exercise) {
           $.each(exercise_pics, function(i, pic){
             exercise_info +=`<img src="${pic.url}"><br>`;
-          });
+          }); 
+          exercise_info +=`</div>`
         }
-        exercise_info += ` Exercise: ${exercise_name}`
-        exercise_info += ` <br> Body Group: ${exercise_bodygroup}`
-        exercise_info += ` <br> Movement: ${exercise_movement}`
+        <p class="thicker"></p>
+        exercise_info +=`<div class='col-md-4'>`
+          exercise_info += ` Exercise: ${exercise_name}`
+        exercise_info +=`</div>`
+        </p>
+        exercise_info +=`<div class='col-md-4'>`
+          exercise_info += ` <br> Body Group: ${exercise_bodygroup}`
+        exercise_info +=`</div>`
+        exercise_info +=`<div class='col-md-4'>`
+          exercise_info += ` <br> Movement: ${exercise_movement}`
+        exercise_info +=`</div>`  
         exercise_info +=`</li>`;
       }
       $('.exercises').append(exercise_info);
     });
+    
 }
 
 $.get(exercise_records, renderRecords);
