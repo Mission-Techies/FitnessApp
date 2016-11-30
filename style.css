@@ -1,4 +1,8 @@
 img {
- max-width: 50%;
+ max-width: 30%;
  height: auto;
+}
+.exercises li {
+ border-bottom: 1px solid lightgray;
+  border-style: dottedd;
 }
