@@ -12,7 +12,7 @@ function renderRecords(data) {
       if (exercise_name) {
         exercise_info +=`<li class='row'>`
 
-          exercise_info +=`<a href='details.html?exerciseID=${exercise.id}"></a>' class='col-md-4'>`
+          exercise_info +=`<a href='details.html?exerciseID=${exercise.id}' class='col-md-4'>`
 
             if (exercise) {
               $.each(exercise_pics, function(i, pic){
